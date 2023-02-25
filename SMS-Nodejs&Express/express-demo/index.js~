@@ -8,8 +8,22 @@ app.get('/', (req, res) => {
 //app.post()
 //app.put()
 //app.delete()
+
+// defining a new route - for getting the list of courses
 app.get('/api/courses', (req, res) => {
 	res.send([1, 2, 3]);
 });
 
-app.listen(3000, () => console.log('Listening on port 3000...'));
+// route for single courses
+//  /api/coures/1
+//app.get('/api/courses/:id', (req, res) => {
+//	res.send(req.params.id);
+//});
+
+app.get('/api/posts/:year/:month', (req, res) => {
+	res.send(req.params);
+});
+
+//environment variable - PORT
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
