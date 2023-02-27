@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-workshop",
+  "version": "1.0.0",
+  "description": "Project1",
+  "main": "index.js",
+  "scripts": {
+	  "start": "babel-watch ./index.js"
+	  "build": "babel src -d lib"
+	  "lint": "eslint . --ext .js --cache"
+	  "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenthouky/Nodejs-Workshop.git"
+  },
+  "author": "Kenthouky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenthouky/Nodejs-Workshop/issues"
+  },
+  "homepage": "https://github.com/Kenthouky/Nodejs-Workshop#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "babel-watch": "^7.7.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
